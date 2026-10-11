@@ -112,8 +112,9 @@ input,select,textarea{font:inherit;color:inherit}
 .split .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.16em .02em .04em;margin:-.16em -.02em -.04em}
 .split .w>span{display:inline-block;transform:translateY(110%);transition:transform 1.1s var(--ease)}
 .split.in .w>span{transform:none}
-.wipe{clip-path:inset(100% 0 0 0);transition:clip-path 1.4s var(--ease)}
-.wipe.in{clip-path:inset(0)}
+.wipe{position:relative}
+.wipe::after{content:"";position:absolute;inset:-1px;background:var(--paper);transform-origin:50% 0;transition:transform 1.3s var(--ease);z-index:2}
+.wipe.in::after{transform:scaleY(0)}
 .wipe img{transform:scale(1.15);transition:transform 2s var(--ease)}
 .wipe.in img{transform:scale(1)}
 
@@ -138,7 +139,7 @@ input,select,textarea{font:inherit;color:inherit}
 .hero{padding:clamp(24px,3vw,40px) 0 0}
 .hero-grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(24px,3vw,48px);min-height:calc(100svh - 72px - 150px)}
 .hero-main{display:flex;flex-direction:column;justify-content:space-between;gap:32px;padding-top:8px}
-.d-hero{font-size:clamp(56px,7.6vw,128px)}
+.d-hero{font-size:clamp(52px,min(7.6vw,15vh),128px)}
 .d-hero span{display:block}
 .hero-copy{display:grid;grid-template-columns:1fr;gap:28px;padding-bottom:4px}
 .hero-copy .actions{display:flex;gap:10px;flex-wrap:wrap}
@@ -154,15 +155,20 @@ input,select,textarea{font:inherit;color:inherit}
 .seglist li{border-bottom:1px solid var(--line)}
 .seglist a{display:grid;grid-template-columns:70px 1fr auto;align-items:center;gap:20px;padding:14px 0;transition:color .3s,padding .5s var(--ease)}
 .seglist .nm{font-stretch:68%;font-weight:800;text-transform:uppercase;font-size:clamp(40px,6.4vw,96px);line-height:.95}
-.seglist .ex{font-size:15px;color:var(--muted);text-align:right;max-width:280px}
+.seglist .sx{font-size:15px;color:var(--muted);text-align:right;max-width:280px}
 .seglist a:hover{color:var(--blue);padding-left:18px}
-.seglist a:hover .ex{color:var(--ink)}
+.seglist a:hover .sx{color:var(--ink)}
 .cursor-ph{position:fixed;left:0;top:0;width:300px;height:380px;pointer-events:none;z-index:40;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .35s,transform .5s var(--ease);overflow:hidden}
 .cursor-ph.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
 .cursor-ph img{width:100%;height:100%;position:absolute;inset:0;opacity:0;transition:opacity .3s}
 .cursor-ph img.on{opacity:1}
 .seglist .thumb{display:none}
-@media (hover:none),(max-width:760px){.cursor-ph{display:none}.seglist a{grid-template-columns:40px 1fr 72px}.seglist .ex{display:none}.seglist .thumb{display:block;width:72px;height:72px}}
+@media (hover:none),(max-width:760px){.cursor-ph{display:none}.seglist a{grid-template-columns:40px 1fr 72px}.seglist .sx{display:none}.seglist .thumb{display:block;width:72px;height:72px}}
+
+/* intro de seção */
+.intro{display:grid;grid-template-columns:8fr 4fr;gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(40px,5vw,72px)}
+.intro .lead{padding-bottom:8px}
+@media (max-width:900px){.intro{grid-template-columns:1fr}}
 
 /* princípios */
 .principles{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,120px)}
@@ -191,7 +197,7 @@ input,select,textarea{font:inherit;color:inherit}
 .pcol.axis{background:var(--blue);color:#fff;border-left:0;padding-left:22px}
 .pcol.axis .pd,.pcol.axis .big span,.pcol.axis .big .plus{color:rgba(255,255,255,.7)}
 .pcol.axis .big{border-color:rgba(255,255,255,.3)}
-.pcol .flag{position:absolute;top:22px;right:22px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.pcol .flag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:-10px}
 .dark .pcols{border-color:rgba(242,239,232,.85)}
 .dark .pcol{border-color:rgba(242,239,232,.16)}
 .dark .pcol .big{border-color:rgba(242,239,232,.16)}
@@ -469,6 +475,6 @@ table.cmp{width:100%;border-collapse:collapse;min-width:820px;font-size:15.5px}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  .reveal{opacity:1;transform:none}.split .w>span{transform:none}.wipe{clip-path:none}.wipe img{transform:none}
+  .reveal{opacity:1;transform:none}.split .w>span{transform:none}.wipe::after{display:none}.wipe img{transform:none}
   .logo-anim .stroke{stroke-dashoffset:0}.logo-anim .dot{transform:none;opacity:1}
 }

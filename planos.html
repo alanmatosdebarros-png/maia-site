@@ -9,7 +9,7 @@
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css?v=1791683887">
+<link rel="stylesheet" href="./style.css?v=1791684101">
 <meta property="og:title" content="Planos · Maia"><meta property="og:description" content="Quatro planos mensais de conteúdo para redes sociais, com quantidades, formatos, acompanhamento e limites claros.">
 </head>
 <body>
@@ -62,9 +62,9 @@
 <section class="sec">
   <div class="wrap">
     <div class="sec-top"><span class="label ink">Comparativo</span><span class="idx">01</span></div>
-    <div class="principles" style="margin-bottom:48px">
+    <div class="intro">
       <h2 class="disp d-l" data-split>Lado a lado.</h2>
-      <p class="lead reveal" style="align-self:end">Todos os planos incluem estratégia de conteúdo e painel do cliente.</p>
+      <p class="lead reveal">Todos os planos incluem estratégia de conteúdo e painel do cliente.</p>
     </div>
     <div class="table-wrap reveal">
       <table class="cmp">
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const M=window.MAIA;
   document.getElementById('plans').innerHTML=M.order.map(id=>{const p=M.plans[id];const ax=id==='impulso';
     const items=[`${p.carrosseis} carrosséis e ${p.estaticos} estáticos`, p.videos?`${p.videos} vídeos curtos somados aos posts`:'Sem vídeos', p.redes, p.acompanhamento, p.midia?'Estratégia de mídia paga':'Estratégia de conteúdo e painel'];
-    return `<div class="pcol ${ax?'axis':''} reveal in" id="${id}">${ax?'<span class="flag">Com mídia paga</span>':''}
+    return `<div class="pcol ${ax?'axis':''} reveal in" id="${id}">${ax?'<span class="flag">Com mídia paga</span>':'<span class="flag" style="visibility:hidden" aria-hidden="true">.</span>'}
       <div class="pn">${p.name}</div><div class="pd">${p.ideal}</div>
       <div class="big"><div><b>${String(p.posts).padStart(2,'0')}</b><span>posts</span></div><span class="plus">+</span><div><b>${String(p.videos).padStart(2,'0')}</b><span>vídeos</span></div></div>
       <p class="small" style="${ax?'color:rgba(255,255,255,.8)':'color:var(--muted)'}">${p.posts+p.videos} publicações no mês</p>
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     <div class="foot-bottom"><span>Maia · protótipo navegável · versão para teste</span><span>Fotos ilustrativas via Unsplash. Sem clientes, depoimentos ou resultados inventados.</span></div>
   </div>
 </footer>
-<script src="./main.js?v=1791683887"></script>
-<script src="./data.js?v=1791683887"></script>
+<script src="./main.js?v=1791684101"></script>
+<script src="./data.js?v=1791684101"></script>
 </body>
 </html>
