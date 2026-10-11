@@ -94,35 +94,35 @@
 
     // escopo
     const mix = M.mix[S.goal];
-    const why = S.plan===S.suggested ? `<div class="why"><b>Por que o ${p.name}</b>${S.note||reasons[S.plan]}</div>` : `<div class="why" style="background:var(--paper-2)"><b>Você está vendo o ${p.name}</b>O sugerido para as suas respostas é o ${M.plans[S.suggested].name}.</div>`;
+    const why = S.plan===S.suggested ? `<div class="why"><b>Por que o ${p.name}</b>${S.note||reasons[S.plan]}</div>` : `<div class="why"><b>Você está vendo o ${p.name}</b>O sugerido para as suas respostas é o ${M.plans[S.suggested].name}.</div>`;
     panel('escopo').innerHTML = why + `
-      <div class="grid-2" style="margin-bottom:28px">
+      <div class="grid-2" style="margin-bottom:40px">
         <div class="card"><span class="k">Por mês</span><ul class="chk">
           <li>${p.carrosseis} carrosséis</li><li>${p.estaticos} posts estáticos</li>
           ${p.videos?`<li>${p.videos} vídeos curtos de até 60 segundos</li>`:''}
           <li>Pauta mensal e linha editorial</li><li>${p.acompanhamento}</li>
           ${p.midia?'<li>Estratégia de mídia paga e até 4 peças adaptadas para anúncio</li>':''}
         </ul></div>
-        <div class="card"><span class="k">Onde publica</span><p style="font-size:20px;letter-spacing:-.02em;font-weight:600">${p.redes}</p>
+        <div class="card"><span class="k">Onde publica</span><p style="font-size:22px;letter-spacing:-.02em;font-weight:600">${p.redes}</p>
         <span class="k" style="margin-top:24px">Indicadores no painel</span><p>${kpis(S.goal).join(', ')}.</p></div>
       </div>
       <h3 class="h3" style="margin-bottom:18px">Mistura de temas para "${goal.label.toLowerCase()}"</h3>
       <div class="mix">${mix.map(([t,v])=>`<div class="mix-row"><span>${t}</span><div class="mix-bar"><span style="width:${v}%"></span></div><b>${v}%</b></div>`).join('')}</div>`;
 
     // calendário
-    panel('calendario').innerHTML = calendar(p) + `<div class="legend"><span><i style="background:var(--lilac)"></i>Carrossel</span><span><i style="background:var(--sky)"></i>Estático</span><span><i style="background:var(--coral)"></i>Vídeo</span></div><p class="small muted" style="margin-top:12px">Distribuição de exemplo. As datas reais são combinadas na pauta.</p>`;
+    panel('calendario').innerHTML = calendar(p) + `<div class="legend"><span><i style="background:var(--ink)"></i>Carrossel</span><span><i style="box-shadow:inset 0 0 0 1.5px var(--ink)"></i>Estático</span><span><i style="background:var(--blue)"></i>Vídeo</span></div><p class="small muted" style="margin-top:12px">Distribuição de exemplo. As datas reais são combinadas na pauta.</p>`;
 
     // exemplos
     const ex = M.examples[S.seg];
     const fmtName = {carrossel:'Carrossel', video:'Vídeo', estatico:'Estático'};
-    const fmtBg = {carrossel:'var(--lilac)', video:'var(--coral);color:#fff', estatico:'var(--sky)'};
+    const fmtBg = {carrossel:'', video:'', estatico:''};
     const list = p.videos ? ex : ex.filter(e => e[0]!=='video');
     panel('exemplos').innerHTML = `<p class="lead" style="margin-bottom:24px">Ideias para ${seg.label.toLowerCase()} que poderiam entrar na pauta. São exemplos, a pauta real nasce do diagnóstico.</p>
-      <div class="ex-list">${list.map(e=>`<div class="ex"><span class="fmt" style="background:${fmtBg[e[0]]}">${fmtName[e[0]]}</span><b>${e[1]}</b><p>${e[2]}</p></div>`).join('')}</div>
-      ${S.seg==='saude'?'<div class="callout" style="margin-top:20px"><div class="ic"><svg viewBox="0 0 20 20" fill="none"><path d="M10 6v5m0 3h.01" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></div><div><h3>Área regulada</h3><p>Conteúdos de saúde seguem as regras do conselho profissional. As peças trazem nome e registro, e temas técnicos são validados por você.</p></div></div>':''}`;
+      <div class="ex-list">${list.map(e=>`<div class="ex"><span class="fmt">${fmtName[e[0]]}</span><b>${e[1]}</b><p>${e[2]}</p></div>`).join('')}</div>
+      ${S.seg==='saude'?'<div class="note" style="margin-top:28px"><span class="n">!</span><div><h3>Área regulada</h3><p>Conteúdos de saúde seguem as regras do conselho profissional. As peças trazem nome e registro, e temas técnicos são validados por você.</p></div></div>':''}`;
 
     // produção
-    panel('producao').innerHTML = `<div class="card" style="background:var(--ink);color:var(--paper);border:0;margin-bottom:28px"><span class="k" style="color:var(--coral)">${cap.label}</span><p style="color:rgba(245,242,236,.85);font-size:18px">${cap.prod}</p></div>
+    panel('producao').innerHTML = `<div class="card inkfill" style="margin-bottom:36px"><span class="k">${cap.label}</span><p style="font-size:19px">${cap.prod}</p></div>
       <div class="timeline">
         <div class="tl-item"><span class="when">Semana 1 do primeiro mês</span><h3>Diagnóstico</h3><p>Conversa de uma hora, formulário e acessos às contas.</p></div>
         <div class="tl-item"><span class="when">Até o dia 10</span><h3>Linha editorial</h3><p>Pilares, tom de voz e direção visual para você aprovar.</p></div>

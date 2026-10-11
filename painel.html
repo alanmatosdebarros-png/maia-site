@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Painel do cliente · Maia</title>
 <meta name="description" content="Calendário, aprovações, entregas, indicadores e materiais em um só lugar, pelo celular.">
-<meta name="theme-color" content="#F5F2EC">
+<meta name="theme-color" content="#F2EFE8">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <meta property="og:title" content="Painel do cliente · Maia"><meta property="og:description" content="Calendário, aprovações, entregas, indicadores e materiais em um só lugar, pelo celular.">
 </head>
@@ -16,8 +16,8 @@
 <a href="#conteudo" class="skip" style="position:absolute;left:-999px">Pular para o conteúdo</a>
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="Maia, página inicial"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
-<g stroke="#121212" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <a class="brand" href="index.html" aria-label="Maia, página inicial"><svg class="logo " viewBox="0 0 282 96" fill="none" role="img" aria-label="Maia">
+<g stroke="#0E0E0D" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
 <path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
 <circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
 <path d="M158 40v46"/>
@@ -25,26 +25,26 @@
 <circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
 <path d="M264 40v46"/>
 </g>
-<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+<circle class="dot" cx="188" cy="14" r="11" fill="#2433FF"/>
 </svg></a>
     <nav aria-label="Principal"><ul class="nav-links"><li><a href="planos.html">Planos</a></li><li><a href="como-funciona.html">Como funciona</a></li><li><a href="painel.html" aria-current="page">Painel</a></li><li><a href="midia-paga.html">Mídia paga</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
     <div class="nav-cta">
-      <a class="btn btn-primary btn-sm" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn btn-ink btn-sm" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg></a>
       <button class="menu-btn" aria-expanded="false" aria-controls="mmenu">Menu <i></i></button>
     </div>
   </div>
 </header>
-<div class="mobile-menu" id="mmenu"><a class="m-link" href="index.html">Início<span aria-hidden="true">↗</span></a><a class="m-link" href="planos.html">Planos<span aria-hidden="true">↗</span></a><a class="m-link" href="como-funciona.html">Como funciona<span aria-hidden="true">↗</span></a><a class="m-link" href="painel.html" aria-current="page">Painel<span aria-hidden="true">↗</span></a><a class="m-link" href="midia-paga.html">Mídia paga<span aria-hidden="true">↗</span></a><a class="m-link" href="contato.html">Contato<span aria-hidden="true">↗</span></a><a class="btn btn-coral" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<div class="mobile-menu" id="mmenu"><a class="m-link" href="index.html">Início<span aria-hidden="true">01</span></a><a class="m-link" href="planos.html">Planos<span aria-hidden="true">02</span></a><a class="m-link" href="como-funciona.html">Como funciona<span aria-hidden="true">03</span></a><a class="m-link" href="painel.html" aria-current="page">Painel<span aria-hidden="true">04</span></a><a class="m-link" href="midia-paga.html">Mídia paga<span aria-hidden="true">05</span></a><a class="m-link" href="contato.html">Contato<span aria-hidden="true">06</span></a><a class="btn btn-blue" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"/></svg></a></div>
 <main id="conteudo">
 <section class="page-hero">
   <div class="wrap">
     <nav class="crumbs reveal" aria-label="Você está em"><a href="index.html">Início</a><span>/</span><span>Painel</span></nav>
-    <h1 class="h1" data-split>Tudo que é seu, <span class="serif">num lugar só.</span></h1>
-    <p class="lead reveal" data-d="2">Calendário, aprovações, entregas e indicadores. Você recebe o aviso no WhatsApp ou no e-mail e aprova pelo celular, sem planilha e sem grupo bagunçado.</p>
+    <div class="grid"><h1 class="disp d-l" data-split>Tudo que é seu, num lugar só.</h1>
+    <p class="lead reveal" data-d="2" style="padding-bottom:20px">Calendário, aprovações, entregas e indicadores. Você recebe o aviso no WhatsApp ou no e-mail e aprova pelo celular, sem planilha e sem grupo bagunçado.</p></div>
   </div>
 </section>
 
-<section class="sec" style="padding-top:48px">
+<section style="padding-top:8px">
   <div class="wrap">
     <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px">
       <span class="demo-flag">Demonstração interativa com conteúdo ilustrativo</span>
@@ -94,9 +94,10 @@
   </div>
 </section>
 
-<section class="sec" style="padding-top:0">
+<section class="sec">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow reveal">Áreas</span><h2 class="h2" data-split style="margin-top:16px">O que você <span class="serif">encontra.</span></h2></div></div>
+    <div class="sec-top"><span class="label ink">Áreas</span><span class="idx">02</span></div>
+    <h2 class="disp d-l" data-split style="margin-bottom:56px">O que você encontra.</h2>
     <div class="grid-3">
       <div class="card reveal"><span class="k">Calendário</span><h3>O mês inteiro</h3><p>Data, formato, tema e situação de cada peça, com prévia.</p></div>
       <div class="card reveal" data-d="1"><span class="k">Aprovações</span><h3>Aprova ou pede ajuste</h3><p>O sistema conta as rodadas e guarda o histórico de cada pedido.</p></div>
@@ -113,15 +114,15 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <p style="font-size:26px;letter-spacing:-.03em;font-weight:600;line-height:1.15;max-width:340px">Ideias que nascem do <span class="serif">seu negócio.</span></p>
-        <p class="small" style="color:rgba(245,242,236,.55);margin-top:14px;max-width:320px">Agência criativa de conteúdo e social media para pequenas empresas.</p>
+        <p class="disp d-s" style="max-width:420px">Ideias que nascem do seu negócio.</p>
+        <p class="small" style="color:rgba(242,239,232,.55);margin-top:18px;max-width:320px">Agência criativa de conteúdo e social media para pequenas empresas.</p>
       </div>
       <div><h4>Serviços</h4><ul><li><a href="planos.html">Planos</a></li><li><a href="simulador.html">Simulador</a></li><li><a href="midia-paga.html">Mídia paga</a></li></ul></div>
       <div><h4>Como trabalhamos</h4><ul><li><a href="como-funciona.html">Processo</a></li><li><a href="como-funciona.html#combinados">Aprovações e revisões</a></li><li><a href="painel.html">Painel do cliente</a></li><li><a href="como-funciona.html#duvidas">Dúvidas</a></li></ul></div>
       <div><h4>Fale com a gente</h4><ul><li><a href="contato.html">Contato</a></li><li><a href="index.html#marca">Sobre a Maia</a></li></ul></div>
     </div>
-    <div class="foot-big" aria-hidden="true"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
-<g stroke="#F5F2EC" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <div class="foot-big" aria-hidden="true"><svg class="logo " viewBox="0 0 282 96" fill="none" role="img" aria-label="Maia">
+<g stroke="#F2EFE8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
 <path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
 <circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
 <path d="M158 40v46"/>
@@ -129,9 +130,9 @@
 <circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
 <path d="M264 40v46"/>
 </g>
-<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+<circle class="dot" cx="188" cy="14" r="11" fill="#2433FF"/>
 </svg></div>
-    <div class="foot-bottom"><span>Maia · protótipo navegável · versão para teste</span><span>Sem clientes, depoimentos ou resultados inventados.</span></div>
+    <div class="foot-bottom"><span>Maia · protótipo navegável · versão para teste</span><span>Fotos ilustrativas via Unsplash. Sem clientes, depoimentos ou resultados inventados.</span></div>
   </div>
 </footer>
 <script src="./main.js"></script>
