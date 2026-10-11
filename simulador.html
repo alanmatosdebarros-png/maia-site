@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simulador · Maia</title>
+<meta name="description" content="Responda três perguntas e veja o plano sugerido, com quantidades, calendário, exemplos de conteúdo e o que está incluído.">
+<meta name="theme-color" content="#F5F2EC">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<meta property="og:title" content="Simulador · Maia"><meta property="og:description" content="Responda três perguntas e veja o plano sugerido, com quantidades, calendário, exemplos de conteúdo e o que está incluído.">
+</head>
+<body>
+<a href="#conteudo" class="skip" style="position:absolute;left:-999px">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Maia, página inicial"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
+<g stroke="#121212" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
+<circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
+<path d="M158 40v46"/>
+<path d="M188 40v46"/>
+<circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
+<path d="M264 40v46"/>
+</g>
+<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+</svg></a>
+    <nav aria-label="Principal"><ul class="nav-links"><li><a href="planos.html">Planos</a></li><li><a href="como-funciona.html">Como funciona</a></li><li><a href="painel.html">Painel</a></li><li><a href="midia-paga.html">Mídia paga</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mmenu">Menu <i></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mmenu"><a class="m-link" href="index.html">Início<span aria-hidden="true">↗</span></a><a class="m-link" href="planos.html">Planos<span aria-hidden="true">↗</span></a><a class="m-link" href="como-funciona.html">Como funciona<span aria-hidden="true">↗</span></a><a class="m-link" href="painel.html">Painel<span aria-hidden="true">↗</span></a><a class="m-link" href="midia-paga.html">Mídia paga<span aria-hidden="true">↗</span></a><a class="m-link" href="contato.html">Contato<span aria-hidden="true">↗</span></a><a class="btn btn-coral" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<main id="conteudo">
+<div class="wrap sim" id="sim">
+  <div class="sim-top">
+    <span class="eyebrow" id="sim-label">Pergunta 1 de 3</span>
+    <div class="progress" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+
+  <section class="sim-step active" data-step="0" aria-labelledby="q0">
+    <span class="eyebrow">Segmento</span>
+    <h1 class="q" id="q0">Qual é o seu <span class="serif">negócio?</span></h1>
+    <p class="lead">Os exemplos de conteúdo vão ser do seu segmento.</p>
+    <div class="opts" id="opt-seg" role="group" aria-labelledby="q0"></div>
+  </section>
+
+  <section class="sim-step" data-step="1" aria-labelledby="q1">
+    <span class="eyebrow">Objetivo</span>
+    <h1 class="q" id="q1">O que você mais quer das <span class="serif">redes agora?</span></h1>
+    <p class="lead">Escolha o principal. Ele define a mistura de temas e os indicadores.</p>
+    <div class="opts five" id="opt-goal" role="group" aria-labelledby="q1"></div>
+  </section>
+
+  <section class="sim-step" data-step="2" aria-labelledby="q2">
+    <span class="eyebrow">Capacidade de produção</span>
+    <h1 class="q" id="q2">Quanto material você consegue <span class="serif">produzir?</span></h1>
+    <p class="lead">Fotos e vídeos do dia a dia. Não existe resposta errada, o plano se ajusta.</p>
+    <div class="opts three" id="opt-cap" role="group" aria-labelledby="q2"></div>
+  </section>
+
+  <div class="sim-nav" id="sim-nav">
+    <button class="btn btn-ghost btn-sm" id="back" disabled>Voltar</button>
+    <button class="btn btn-primary" id="next" disabled>Continuar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+
+  <section class="result" id="result" aria-live="polite">
+    <div class="res-grid">
+      <aside class="res-side">
+        <div class="res-plan">
+          <svg class="star-bg" viewBox="0 0 100 100" aria-hidden="true"><path fill="#FF5B2E" d="M50 0C53.5 36 64 46.5 100 50 64 53.5 53.5 64 50 100 46.5 64 36 53.5 0 50 36 46.5 46.5 36 50 0Z"/></svg>
+          <span class="lbl" id="r-lbl">Plano sugerido</span>
+          <div class="nm" id="r-name"></div>
+          <p id="r-short"></p>
+          <div class="nums"><div><b id="r-posts"></b><span>posts</span></div><div><b id="r-videos"></b><span>vídeos</span></div><div><b id="r-total"></b><span>no mês</span></div></div>
+        </div>
+        <div class="switch" role="group" aria-label="Explorar outros planos" id="r-switch"></div>
+        <div class="answers" id="r-answers"></div>
+        <a class="btn btn-coral" id="r-cta" href="contato.html?sim=1" style="justify-content:center">Quero conversar sobre este plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </aside>
+      <div>
+        <div class="tabs" role="tablist" id="r-tabs">
+          <button role="tab" aria-selected="true" data-t="escopo">Escopo</button>
+          <button role="tab" aria-selected="false" data-t="calendario">Calendário</button>
+          <button role="tab" aria-selected="false" data-t="exemplos">Exemplos</button>
+          <button role="tab" aria-selected="false" data-t="producao">Como produzimos</button>
+          <button role="tab" aria-selected="false" data-t="incluido">Incluído e limites</button>
+        </div>
+        <div class="tabpanel active" data-p="escopo" role="tabpanel"></div>
+        <div class="tabpanel" data-p="calendario" role="tabpanel"></div>
+        <div class="tabpanel" data-p="exemplos" role="tabpanel"></div>
+        <div class="tabpanel" data-p="producao" role="tabpanel"></div>
+        <div class="tabpanel" data-p="incluido" role="tabpanel"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p style="font-size:26px;letter-spacing:-.03em;font-weight:600;line-height:1.15;max-width:340px">Ideias que nascem do <span class="serif">seu negócio.</span></p>
+        <p class="small" style="color:rgba(245,242,236,.55);margin-top:14px;max-width:320px">Agência criativa de conteúdo e social media para pequenas empresas.</p>
+      </div>
+      <div><h4>Serviços</h4><ul><li><a href="planos.html">Planos</a></li><li><a href="simulador.html">Simulador</a></li><li><a href="midia-paga.html">Mídia paga</a></li></ul></div>
+      <div><h4>Como trabalhamos</h4><ul><li><a href="como-funciona.html">Processo</a></li><li><a href="como-funciona.html#combinados">Aprovações e revisões</a></li><li><a href="painel.html">Painel do cliente</a></li><li><a href="como-funciona.html#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Fale com a gente</h4><ul><li><a href="contato.html">Contato</a></li><li><a href="index.html#marca">Sobre a Maia</a></li></ul></div>
+    </div>
+    <div class="foot-big" aria-hidden="true"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
+<g stroke="#F5F2EC" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
+<circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
+<path d="M158 40v46"/>
+<path d="M188 40v46"/>
+<circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
+<path d="M264 40v46"/>
+</g>
+<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+</svg></div>
+    <div class="foot-bottom"><span>Maia · protótipo navegável · versão para teste</span><span>Sem clientes, depoimentos ou resultados inventados.</span></div>
+  </div>
+</footer>
+<script src="./main.js"></script>
+<script src="./data.js"></script><script src="./simulador.js"></script>
+</body>
+</html>

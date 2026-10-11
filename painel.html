@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel do cliente · Maia</title>
+<meta name="description" content="Calendário, aprovações, entregas, indicadores e materiais em um só lugar, pelo celular.">
+<meta name="theme-color" content="#F5F2EC">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<meta property="og:title" content="Painel do cliente · Maia"><meta property="og:description" content="Calendário, aprovações, entregas, indicadores e materiais em um só lugar, pelo celular.">
+</head>
+<body>
+<a href="#conteudo" class="skip" style="position:absolute;left:-999px">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Maia, página inicial"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
+<g stroke="#121212" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
+<circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
+<path d="M158 40v46"/>
+<path d="M188 40v46"/>
+<circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
+<path d="M264 40v46"/>
+</g>
+<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+</svg></a>
+    <nav aria-label="Principal"><ul class="nav-links"><li><a href="planos.html">Planos</a></li><li><a href="como-funciona.html">Como funciona</a></li><li><a href="painel.html" aria-current="page">Painel</a></li><li><a href="midia-paga.html">Mídia paga</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mmenu">Menu <i></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mmenu"><a class="m-link" href="index.html">Início<span aria-hidden="true">↗</span></a><a class="m-link" href="planos.html">Planos<span aria-hidden="true">↗</span></a><a class="m-link" href="como-funciona.html">Como funciona<span aria-hidden="true">↗</span></a><a class="m-link" href="painel.html" aria-current="page">Painel<span aria-hidden="true">↗</span></a><a class="m-link" href="midia-paga.html">Mídia paga<span aria-hidden="true">↗</span></a><a class="m-link" href="contato.html">Contato<span aria-hidden="true">↗</span></a><a class="btn btn-coral" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<main id="conteudo">
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs reveal" aria-label="Você está em"><a href="index.html">Início</a><span>/</span><span>Painel</span></nav>
+    <h1 class="h1" data-split>Tudo que é seu, <span class="serif">num lugar só.</span></h1>
+    <p class="lead reveal" data-d="2">Calendário, aprovações, entregas e indicadores. Você recebe o aviso no WhatsApp ou no e-mail e aprova pelo celular, sem planilha e sem grupo bagunçado.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:48px">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px">
+      <span class="demo-flag">Demonstração interativa com conteúdo ilustrativo</span>
+      <span class="small muted">Experimente aprovar ou pedir ajuste</span>
+    </div>
+    <div class="app reveal">
+      <aside class="app-side" role="tablist" aria-label="Áreas do painel">
+        <div class="who"><div class="av">SN</div><div><b>Seu Negócio</b><span>Plano Ritmo</span></div></div>
+        <button role="tab" aria-selected="true" data-v="geral">Visão geral</button>
+        <button role="tab" aria-selected="false" data-v="aprovacoes">Aprovações <span class="count" id="cnt">3</span></button>
+        <button role="tab" aria-selected="false" data-v="calendario">Calendário</button>
+        <button role="tab" aria-selected="false" data-v="entregas">Entregas</button>
+        <button role="tab" aria-selected="false" data-v="indicadores">Indicadores</button>
+        <button role="tab" aria-selected="false" data-v="materiais">Materiais</button>
+      </aside>
+      <div class="app-main">
+        <div class="app-view active" data-view="geral">
+          <div class="app-head"><div><h2>Bom dia</h2><p class="muted">Resumo do mês</p></div></div>
+          <div class="kpis" id="kpis"></div>
+          <h3 style="font-size:18px;margin:8px 0 12px">Próximas publicações</h3>
+          <div class="list" id="next-list"></div>
+        </div>
+        <div class="app-view" data-view="aprovacoes">
+          <div class="app-head"><div><h2>Aprovações</h2><p class="muted">Lote 2 · prazo de 2 dias úteis</p></div></div>
+          <div id="appr-list"></div>
+        </div>
+        <div class="app-view" data-view="calendario">
+          <div class="app-head"><div><h2>Calendário</h2><p class="muted">Situação de cada peça</p></div></div>
+          <div class="list" id="cal-list"></div>
+        </div>
+        <div class="app-view" data-view="entregas">
+          <div class="app-head"><div><h2>Entregas</h2><p class="muted">Escopo contratado e andamento</p></div></div>
+          <div id="deliv"></div>
+        </div>
+        <div class="app-view" data-view="indicadores">
+          <div class="app-head"><div><h2>Indicadores</h2><p class="muted">Escolhidos pelo objetivo: ser lembrado</p></div></div>
+          <div class="kpis" id="ind"></div>
+          <div class="chart-ph">Os gráficos aparecem aqui quando houver dados reais da conta.<br>Nada é inventado na demonstração.</div>
+          <div class="card" style="margin-top:14px;background:var(--paper)"><span class="k">Dado que só você tem</span><p>Informe vendas ou agendamentos do mês para cruzar com o conteúdo.</p></div>
+        </div>
+        <div class="app-view" data-view="materiais">
+          <div class="app-head"><div><h2>Materiais</h2><p class="muted">Envie fotos e vídeos brutos</p></div></div>
+          <div class="dropzone">Arraste arquivos aqui<br><span class="small">Na demonstração, nada é enviado</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow reveal">Áreas</span><h2 class="h2" data-split style="margin-top:16px">O que você <span class="serif">encontra.</span></h2></div></div>
+    <div class="grid-3">
+      <div class="card reveal"><span class="k">Calendário</span><h3>O mês inteiro</h3><p>Data, formato, tema e situação de cada peça, com prévia.</p></div>
+      <div class="card reveal" data-d="1"><span class="k">Aprovações</span><h3>Aprova ou pede ajuste</h3><p>O sistema conta as rodadas e guarda o histórico de cada pedido.</p></div>
+      <div class="card reveal" data-d="2"><span class="k">Entregas</span><h3>Quanto já foi feito</h3><p>Produzido, aprovado e publicado em relação ao contratado.</p></div>
+      <div class="card reveal"><span class="k">Indicadores</span><h3>Pelo seu objetivo</h3><p>Métricas escolhidas pelo que você quer, com leitura em linguagem simples.</p></div>
+      <div class="card reveal" data-d="1"><span class="k">Materiais</span><h3>Pasta compartilhada</h3><p>Envio de fotos e vídeos brutos e acesso às peças finais.</p></div>
+      <div class="card reveal" data-d="2"><span class="k">Avisos</span><h3>WhatsApp ou e-mail</h3><p>Você é avisado quando tem peça esperando aprovação.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p style="font-size:26px;letter-spacing:-.03em;font-weight:600;line-height:1.15;max-width:340px">Ideias que nascem do <span class="serif">seu negócio.</span></p>
+        <p class="small" style="color:rgba(245,242,236,.55);margin-top:14px;max-width:320px">Agência criativa de conteúdo e social media para pequenas empresas.</p>
+      </div>
+      <div><h4>Serviços</h4><ul><li><a href="planos.html">Planos</a></li><li><a href="simulador.html">Simulador</a></li><li><a href="midia-paga.html">Mídia paga</a></li></ul></div>
+      <div><h4>Como trabalhamos</h4><ul><li><a href="como-funciona.html">Processo</a></li><li><a href="como-funciona.html#combinados">Aprovações e revisões</a></li><li><a href="painel.html">Painel do cliente</a></li><li><a href="como-funciona.html#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Fale com a gente</h4><ul><li><a href="contato.html">Contato</a></li><li><a href="index.html#marca">Sobre a Maia</a></li></ul></div>
+    </div>
+    <div class="foot-big" aria-hidden="true"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
+<g stroke="#F5F2EC" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
+<circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
+<path d="M158 40v46"/>
+<path d="M188 40v46"/>
+<circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
+<path d="M264 40v46"/>
+</g>
+<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+</svg></div>
+    <div class="foot-bottom"><span>Maia · protótipo navegável · versão para teste</span><span>Sem clientes, depoimentos ou resultados inventados.</span></div>
+  </div>
+</footer>
+<script src="./main.js"></script>
+<script src="./painel.js"></script>
+</body>
+</html>

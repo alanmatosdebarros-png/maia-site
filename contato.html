@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contato · Maia</title>
+<meta name="description" content="Conte sobre o seu negócio. Se você fez a simulação, o resumo já vem preenchido.">
+<meta name="theme-color" content="#F5F2EC">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<meta property="og:title" content="Contato · Maia"><meta property="og:description" content="Conte sobre o seu negócio. Se você fez a simulação, o resumo já vem preenchido.">
+</head>
+<body>
+<a href="#conteudo" class="skip" style="position:absolute;left:-999px">Pular para o conteúdo</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Maia, página inicial"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
+<g stroke="#121212" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
+<circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
+<path d="M158 40v46"/>
+<path d="M188 40v46"/>
+<circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
+<path d="M264 40v46"/>
+</g>
+<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+</svg></a>
+    <nav aria-label="Principal"><ul class="nav-links"><li><a href="planos.html">Planos</a></li><li><a href="como-funciona.html">Como funciona</a></li><li><a href="painel.html">Painel</a></li><li><a href="midia-paga.html">Mídia paga</a></li><li><a href="contato.html" aria-current="page">Contato</a></li></ul></nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="mmenu">Menu <i></i></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mmenu"><a class="m-link" href="index.html">Início<span aria-hidden="true">↗</span></a><a class="m-link" href="planos.html">Planos<span aria-hidden="true">↗</span></a><a class="m-link" href="como-funciona.html">Como funciona<span aria-hidden="true">↗</span></a><a class="m-link" href="painel.html">Painel<span aria-hidden="true">↗</span></a><a class="m-link" href="midia-paga.html">Mídia paga<span aria-hidden="true">↗</span></a><a class="m-link" href="contato.html" aria-current="page">Contato<span aria-hidden="true">↗</span></a><a class="btn btn-coral" href="simulador.html">Simular meu plano <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<main id="conteudo">
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="crumbs reveal" aria-label="Você está em"><a href="index.html">Início</a><span>/</span><span>Contato</span></nav>
+    <h1 class="h1" data-split>Vamos conversar <span class="serif">sobre o seu negócio.</span></h1>
+    <p class="lead reveal" data-d="2">A primeira conversa serve para entender o momento do negócio. A proposta com valores vem depois.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:56px">
+  <div class="wrap grid-2" style="gap:clamp(32px,6vw,96px);align-items:start">
+    <form class="form reveal" id="form" novalidate>
+      <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+      <div class="field"><label for="f-neg">Nome do negócio</label><input id="f-neg" name="negocio" autocomplete="organization" required></div>
+      <div class="field"><label for="f-contato">WhatsApp ou e-mail</label><input id="f-contato" name="contato" required></div>
+      <div class="field"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem"></textarea></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" type="submit">Enviar <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="btn btn-ghost" type="button" id="copy">Copiar resumo</button>
+      </div>
+      <span class="demo-flag" style="justify-self:start">Protótipo: o envio ainda não está conectado</span>
+    </form>
+    <aside class="reveal" data-d="1" style="display:grid;gap:14px">
+      <div class="card" id="sim-card" style="background:var(--ink);color:var(--paper);border:0;display:none"><span class="k" style="color:var(--coral)">Sua simulação</span><div id="sim-sum"></div><a href="simulador.html" class="small" style="text-decoration:underline;color:rgba(245,242,236,.7);display:inline-block;margin-top:14px">Refazer a simulação</a></div>
+      <div class="card" id="nosim" style="background:var(--butter);border:0"><span class="k">Dica</span><h3>Ainda não simulou?</h3><p>Três perguntas e você chega na conversa com o escopo desenhado.</p><a class="btn btn-primary btn-sm" href="simulador.html" style="margin-top:16px">Simular agora</a></div>
+      <div class="card"><span class="k">O que acontece depois</span><ul class="chk"><li>Retorno para marcar a conversa</li><li>Conversa sobre o negócio e o objetivo</li><li>Proposta com escopo e valores</li></ul></div>
+    </aside>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const q=new URLSearchParams(location.search), sim=maiaStore.get('maia-sim'), M=window.MAIA;
+  const msg=document.getElementById('f-msg');
+  if(sim && q.get('sim')){
+    document.getElementById('sim-card').style.display='block'; document.getElementById('nosim').style.display='none';
+    document.getElementById('sim-sum').innerHTML=`<p style="font-size:44px;font-weight:600;letter-spacing:-.04em;line-height:1">${sim.plan}</p><p style="color:rgba(245,242,236,.7);margin-top:8px">${sim.posts} posts e ${sim.videos} vídeos por mês</p><div class="answers" style="margin-top:16px;background:rgba(255,255,255,.06);border:0"><div><span>Segmento</span><b>${sim.seg}</b></div><div><span>Objetivo</span><b>${sim.goal}</b></div><div><span>Material</span><b>${sim.cap}</b></div></div>`;
+    msg.value=`Olá! Fiz a simulação no site.\n\nPlano: ${sim.plan} (${sim.posts} posts e ${sim.videos} vídeos por mês)\nSegmento: ${sim.seg}\nObjetivo: ${sim.goal}\nMaterial: ${sim.cap}\n\nQuero conversar sobre esse escopo.`;
+  } else if(q.get('plano') && M.plans[q.get('plano')]){
+    const p=M.plans[q.get('plano')]; msg.value=`Olá! Tenho interesse no plano ${p.name} (${p.posts} posts e ${p.videos} vídeos por mês).`;
+  }
+  document.getElementById('copy').onclick=async()=>{const t=`Nome: ${f('f-nome')}\nNegócio: ${f('f-neg')}\nContato: ${f('f-contato')}\n\n${msg.value}`;try{await navigator.clipboard.writeText(t);maiaToast('Resumo copiado.')}catch(e){maiaToast('Não foi possível copiar.')}};
+  const f=id=>document.getElementById(id).value.trim();
+  document.getElementById('form').onsubmit=e=>{e.preventDefault();
+    const miss=['f-nome','f-neg','f-contato'].find(id=>!f(id)); if(miss){document.getElementById(miss).focus();maiaToast('Preencha nome, negócio e contato.');return;}
+    maiaToast('Protótipo: o envio será conectado na versão final. Use "Copiar resumo".');};
+});
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p style="font-size:26px;letter-spacing:-.03em;font-weight:600;line-height:1.15;max-width:340px">Ideias que nascem do <span class="serif">seu negócio.</span></p>
+        <p class="small" style="color:rgba(245,242,236,.55);margin-top:14px;max-width:320px">Agência criativa de conteúdo e social media para pequenas empresas.</p>
+      </div>
+      <div><h4>Serviços</h4><ul><li><a href="planos.html">Planos</a></li><li><a href="simulador.html">Simulador</a></li><li><a href="midia-paga.html">Mídia paga</a></li></ul></div>
+      <div><h4>Como trabalhamos</h4><ul><li><a href="como-funciona.html">Processo</a></li><li><a href="como-funciona.html#combinados">Aprovações e revisões</a></li><li><a href="painel.html">Painel do cliente</a></li><li><a href="como-funciona.html#duvidas">Dúvidas</a></li></ul></div>
+      <div><h4>Fale com a gente</h4><ul><li><a href="contato.html">Contato</a></li><li><a href="index.html#marca">Sobre a Maia</a></li></ul></div>
+    </div>
+    <div class="foot-big" aria-hidden="true"><svg class="logo " viewBox="0 -12 282 108" fill="none" role="img" aria-label="Maia">
+<g stroke="#F5F2EC" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 86V56a16 16 0 0 1 32 0v30M50 56a16 16 0 0 1 32 0v30"/>
+<circle cx="135" cy="63" r="23" transform="rotate(-90 135 63)"/>
+<path d="M158 40v46"/>
+<path d="M188 40v46"/>
+<circle cx="241" cy="63" r="23" transform="rotate(-90 241 63)"/>
+<path d="M264 40v46"/>
+</g>
+<path class="star" fill="#FF5B2E" d="M188 -9C189.4 2 192.6 5.2 203.6 6.6 192.6 8 189.4 11.2 188 22.2 186.6 11.2 183.4 8 172.4 6.6 183.4 5.2 186.6 2 188 -9Z"/>
+</svg></div>
+    <div class="foot-bottom"><span>Maia · protótipo navegável · versão para teste</span><span>Sem clientes, depoimentos ou resultados inventados.</span></div>
+  </div>
+</footer>
+<script src="./main.js"></script>
+<script src="./data.js"></script>
+</body>
+</html>
